@@ -381,7 +381,7 @@ export default function RhythmGame() {
           background: "linear-gradient(90deg, #FF6B6B, #FFE66D, #4ECDC4, #A29BFE)",
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
         }}>🎵 RHYTHM GAME</h1>
-        <p style={{ opacity: 0.5, marginBottom: 24 }}>Press D F J K or tap lanes</p>
+        <p style={{ opacity: 0.5, marginBottom: 24 }}>D F J Kキー or レーンをタップ</p>
         {SONGS.map((s, i) => (
           <button key={i} onClick={() => startSong(i)} style={{
             width: 280, padding: "14px 20px", margin: 6, borderRadius: 12, border: "none",
@@ -390,7 +390,7 @@ export default function RhythmGame() {
             boxShadow: `0 0 20px ${LANE_COLORS[i]}33`,
           }}>
             {s.name} <span style={{ opacity: 0.5, fontSize: 14 }}>♩{s.bpm}</span>
-            {highScores[i] > 0 && <span style={{ display: "block", fontSize: 12, opacity: 0.6 }}>Best: {highScores[i]}</span>}
+            {highScores[i] > 0 && <span style={{ display: "block", fontSize: 12, opacity: 0.6 }}>ベスト: {highScores[i]}</span>}
           </button>
         ))}
       </div>
@@ -427,12 +427,12 @@ export default function RhythmGame() {
             padding: "10px 24px", borderRadius: 10, border: "none",
             background: "linear-gradient(135deg, #4ECDC4, #44a89d)", color: "#fff",
             fontWeight: 700, cursor: "pointer",
-          }}>Retry</button>
+          }}>リトライ</button>
           <button onClick={() => setScreen("menu")} style={{
             padding: "10px 24px", borderRadius: 10, border: "none",
             background: "rgba(255,255,255,0.1)", color: "#fff",
             fontWeight: 700, cursor: "pointer",
-          }}>Menu</button>
+          }}>メニュー</button>
         </div>
       </div>
     );
